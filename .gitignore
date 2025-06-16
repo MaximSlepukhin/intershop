@@ -34,3 +34,10 @@ build/
 
 
 .mvn
+
+src/test/java/com/github/maximslepukhin/intershop/CartControllerTest.java
+src/test/java/com/github/maximslepukhin/intershop/ItemServiceImplTest.java
+src/test/java/com/github/maximslepukhin/intershop/OrderServiceImplTest.java
+src/test/java/com/github/maximslepukhin/intershop/SpringBootPostgreSQLBase.java
+
+.DS_Store
