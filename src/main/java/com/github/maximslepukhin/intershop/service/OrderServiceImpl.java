@@ -26,7 +26,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<Order> findAll() {
-        return orderRepository.findAll(); // подгружает все заказы
+        return orderRepository.findAll();
     }
 
     @Override

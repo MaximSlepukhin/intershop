@@ -84,13 +84,14 @@ public class ItemServiceImplTest {
         Map<Long, Integer> cart = Map.of(1L, 3);
         Item item = new Item(1L, "Ноутбук Lenovo", "15.6\", 16 ГБ RAM, SSD 512 ГБ",
                 80000, "images/lenovo.jpeg");
+        ItemWithCount expected = new ItemWithCount(item, cart.get(item.getId()));
         when(itemRepository.findById(1L)).thenReturn(Optional.of(item));
 
         List<ItemWithCount> result = itemService.getItemWithCount(cart);
 
         assertEquals(1, result.size());
-        assertEquals(3, result.get(0).getCount());
-        assertEquals(item, result.getFirst());
+        assertEquals(3, result.getFirst().getCount());
+        assertEquals(expected, result.getFirst());
     }
 
     @Test
